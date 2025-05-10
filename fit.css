@@ -3,6 +3,7 @@
       overflow-x: hidden;
        font-family: "Rubik Glitch", system-ui;
        margin: 0;
+     
 
     }
     .main{
@@ -16,8 +17,10 @@
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
+      height: 100px;
       background-color:white;
       align-items: center;
+      top: 0;
      
 
      
@@ -29,8 +32,8 @@
        
     }
     .nav img{
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
     }
     .nav-left{
         display: flex;
@@ -64,7 +67,56 @@
         background-image: url(./src/whey.jpg);
         width: 100vw;
         background-repeat: no-repeat;
-        /* background-position: center; */
+        background-position: center;
         background-size: cover;
+        padding-top: 200px;
 
+    }
+    .container-1 button{
+      position: absolute;
+      top: 57%;
+      left: 46%;
+      padding: 15px;
+      border-radius: 20px;
+      width: 150px;
+      background-color: gray;
+      font-family:"Rubik Glitch", system-ui; 
+      cursor: pointer;
+    }
+    .container-1 button:hover{
+        box-shadow: 2px 2px 4px red;
+    }
+    .dontmiss{
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    .dnmiss{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+    }
+    .dnmiss1 img{
+        width: 80%;
+        position: relative;
+        border-radius: 10px;
+    }
+    .dnmiss1 button{
+           position: absolute;
+           right: 75%;
+    }
+       .dnmiss2 img{
+        width: 80%;
+        position: relative;
+        border-radius: 10px;
+    } 
+      .dnmiss2 button{
+           position: absolute;
+          right: 20%;
+          bottom: 60%;
     }
