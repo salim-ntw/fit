@@ -1,122 +1,245 @@
+body {
+  overflow-x: hidden;
+  font-family: "Rubik Glitch", system-ui;
+  margin: 0;
+}
+.main {
+}
+.nav {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  align-items: center;
+  top: 0;
+}
+.nav-mid {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.nav img {
+  width: 100px;
+  height: 100px;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  gap: 10px;
+}
+.nav .nav-left img {
+  width: 20px;
+  height: 20px;
+}
+.nav .nav-mid a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+.nav .nav-mid a:hover {
+  color: rgb(196, 39, 39);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.nav-left input {
+  height: 20px;
+  border: 3px solid gray;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container-1 {
+  height: 100vh;
+  position: relative;
+  background-image: url(./src/whey.jpg);
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 200px;
+}
+.container-1 button {
+  position: absolute;
+  top: 57%;
+  left: 46%;
+  padding: 15px;
+  border-radius: 20px;
+  width: 150px;
+  background-color: gray;
+  font-family: "Rubik Glitch", system-ui;
+  cursor: pointer;
+}
+.container-1 button:hover {
+  box-shadow: 2px 2px 4px red;
+}
+.dontmiss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dnmiss {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+.dnmiss1 img {
+  width: 80%;
+  position: relative;
+  border-radius: 10px;
+}
+.dnmiss1 button {
+  position: absolute;
+  right: 75%;
+}
+.dnmiss2 img {
+  width: 80%;
+  position: relative;
+  border-radius: 10px;
+}
+.dnmiss2 button {
+  position: absolute;
+  right: 20%;
+  bottom: 60%;
+}
+.cont3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(142, 136, 136);
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.b1g1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+.carte{
+display: flex;
+background-color:black;
+height:270px;
+width: 280px;
+border-radius: 15px;
 
-    body{
-      overflow-x: hidden;
-       font-family: "Rubik Glitch", system-ui;
-       margin: 0;
-     
+}
+.cont3 .b1g1 .carte p{
+  margin-left: 10px;
+  color: white;  
+}
+.contt4{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 40px;
+}
+.cartes4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+.card4{
+height:300px;
+width: 280px;
+border-radius: 15px;
+border: 5px solid black;
 
-    }
-    .main{
-        
-        
-    }
-    .nav{
-      position: fixed;
-      z-index: 100;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      height: 100px;
-      background-color:white;
-      align-items: center;
-      top: 0;
-     
+}
+.contt4 .cartes4 .card4 img{
+height:300px;
+width: 280px;
+border-radius: 15px;
+}
+.contt5{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 40px;
+}
+.cartes5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+.card5{
+height:300px;
+width: 280px;
+border-radius: 15px;
+border: 5px solid black;
 
-     
-    }
-    .nav-mid{
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
-       
-    }
-    .nav img{
-        width: 100px;
-        height: 100px;
-    }
-    .nav-left{
-        display: flex;
-        align-items: center;
-        margin-right: 15px;
-        gap: 10px;
-    }
-    .nav .nav-left img{
-        width: 20px;
-        height: 20px;
-    }
-    .nav .nav-mid a{
-        text-decoration: none;
-        color: black;
-        transition: all 0.3s ease;
-        font-size: 20px;
-    }
-     .nav .nav-mid a:hover{
-    color: rgb(196, 39, 39);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  .nav-left input{
-    height: 20px;
-    border: 3px solid gray;
-    border-radius: 20px;
+}
+.contt5 .cartes5 .card5 img{
+ 
+height:300px;
+width: 280px;
+border-radius: 15px;
+}
+.cont6{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+background-color: black;
+width: 100%;
+margin-top: 60px;
+padding: 50px;
+
+background-image: url(src/plplp.jpg);
+background-repeat: no-repeat;
+
+}
+.cont6 p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+}
+.cont6 h1{
+    color: white;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+
+}
+.inst button {
+    background-color: transparent;
     padding: 10px;
-  }
-     .container-1{
-        height:100vh;
-        position: relative;
-        background-image: url(./src/whey.jpg);
-        width: 100vw;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        padding-top: 200px;
 
-    }
-    .container-1 button{
-      position: absolute;
-      top: 57%;
-      left: 46%;
-      padding: 15px;
-      border-radius: 20px;
-      width: 150px;
-      background-color: gray;
-      font-family:"Rubik Glitch", system-ui; 
-      cursor: pointer;
-    }
-    .container-1 button:hover{
-        box-shadow: 2px 2px 4px red;
-    }
-    .dontmiss{
-       
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        
-    }
-    .dnmiss{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-left: 100px;
-    }
-    .dnmiss1 img{
-        width: 80%;
-        position: relative;
-        border-radius: 10px;
-    }
-    .dnmiss1 button{
-           position: absolute;
-           right: 75%;
-    }
-       .dnmiss2 img{
-        width: 80%;
-        position: relative;
-        border-radius: 10px;
-    } 
-      .dnmiss2 button{
-           position: absolute;
-          right: 20%;
-          bottom: 60%;
-    }
+}
+.face button{
+     background-color: transparent;
+      padding: 10px;
+}
+.face img{
+    width: 25px;
+}
+.inst img{
+    width: 25px;
+}
