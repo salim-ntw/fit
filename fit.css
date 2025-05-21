@@ -72,6 +72,7 @@ body {
   background-color: gray;
   font-family: "Rubik Glitch", system-ui;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 .container-1 button:hover {
   box-shadow: 2px 2px 4px red;
@@ -81,37 +82,59 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .dnmiss {
   display: flex;
-  flex-direction: row;
+  gap: 30px;
   justify-content: center;
-  align-items: center;
-  margin-left: 100px;
+  margin-top: 20px;
 }
-.dnmiss1 img {
-  width: 80%;
+
+.card {
   position: relative;
-  border-radius: 10px;
+  width: 550px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-.dnmiss1 button {
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  transition: transform 0.4s ease;
+  height: 300px;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card button {
   position: absolute;
-  right: 75%;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(142, 136, 136);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.dnmiss2 img {
-  width: 80%;
-  position: relative;
-  border-radius: 10px;
+
+.card button:hover {
+  transform: translateX(-50%) scale(1.05);
 }
-.dnmiss2 button {
-  position: absolute;
-  right: 20%;
-  bottom: 60%;
-}
+
 .cont3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(142, 136, 136);
+
   margin-top: 40px;
   padding-bottom: 40px;
 }
@@ -121,125 +144,276 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  
 }
-.carte{
-display: flex;
-background-color:black;
-height:270px;
-width: 280px;
-border-radius: 15px;
-
+.carte {
+  display: flex;
+  background-image: url(./src/WhatsApp\ Image\ 2025-05-22\ à\ 00.40.18_1a0d8f6b.jpg);
+  background-repeat: no-repeat;
+  background-position:center ;
+  height: 270px;
+  width: 280px;
+  border-radius: 15px;
 }
-.cont3 .b1g1 .carte p{
+.cont3 .b1g1 .carte p {
   margin-left: 10px;
-  color: white;  
+  color: white;
 }
-.contt4{
-    display: flex ;
-    flex-direction: column;
-    align-items: center;
-    
-    margin-top: 40px;
+.contt4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
-.cartes4{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    
-}
-.card4{
-height:300px;
-width: 280px;
-border-radius: 15px;
-border: 5px solid black;
-
-}
-.contt4 .cartes4 .card4 img{
-height:300px;
-width: 280px;
-border-radius: 15px;
-}
-.contt5{
-    display: flex ;
-    flex-direction: column;
-    align-items: center;
-    
-    margin-top: 40px;
-}
-.cartes5{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    
-}
-.card5{
-height:300px;
-width: 280px;
-border-radius: 15px;
-border: 5px solid black;
-
-}
-.contt5 .cartes5 .card5 img{
- 
-height:300px;
-width: 280px;
-border-radius: 15px;
-}
-.cont6{
-display: flex;
-flex-direction: column;
-align-items: center;
-
-background-color: black;
-width: 100%;
-margin-top: 60px;
-padding: 50px;
-
-background-image: url(src/plplp.jpg);
-background-repeat: no-repeat;
-
-}
-.cont6 p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-    line-height: 30px;
-}
-.cont6 h1{
-    color: white;
-}
-.contact{
-    display: flex;
-    flex-direction: column;
-
-    
+.cartes4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.logos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
+.card4 {
+  height: 300px;
+  width: 280px;
+  border-radius: 15px;
+  border: 5px solid black;
+  perspective: 1000px;
+}
 
+.card4 .face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 1s ease;
+}
+
+.card4 .front {
+  z-index: 2;
+}
+
+.card4 .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card4 .back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card4:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card4:hover .back {
+  transform: rotateY(360deg);
+}
+
+.card4 button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: gray;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card4 button:hover {
+  background-color: gray;
+}
+
+.contt5 {
+  text-align: center;
+}
+
+.cartes5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card5 {
+  height: 300px;
+  width: 280px;
+  border-radius: 15px;
+  border: 5px solid black;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card5 .face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 9px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 1s ease;
+}
+
+.card5 .front {
+  z-index: 2;
+}
+
+.card5 .front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card5 .back {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card5:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card5:hover .back {
+  transform: rotateY(360deg);
+}
+
+.card5 button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card5 button:hover {
+  background-color: gray;
+}
+
+.cont6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  margin-top: 60px;
+  padding: 50px;
+  background-image: url(./src/plplp.jpg);
+  background-repeat: no-repeat;
+}
+.cont6 p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+.cont6 h1 {
+  color: white;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
 }
 .inst button {
-    background-color: transparent;
-    padding: 10px;
+  background-color: transparent;
+  padding: 10px;
+}
+.face button {
+  background-color: transparent;
+  padding: 10px;
+}
+.face img {
+  width: 25px;
+}
+.inst img {
+  width: 25px;
+}
 
+.footer {
+  background: url(./src/plplp.jpg);
+  background-repeat: no-repeat;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  margin-top: 50px;
+  font-family: "Segoe UI", sans-serif;
 }
-.face button{
-     background-color: transparent;
-      padding: 10px;
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
-.face img{
-    width: 25px;
+
+.footer h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
-.inst img{
-    width: 25px;
+
+.footer p {
+  color: white;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.footer-contact {
+  margin-top: 30px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.footer-socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
 }
